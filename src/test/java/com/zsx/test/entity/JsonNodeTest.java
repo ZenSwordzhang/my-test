@@ -77,5 +77,15 @@ public class JsonNodeTest {
 
     }
 
+    @Test
+    void testListRemoveNode() {
+        List<ReferenceInfo> infos = List.of(ReferenceInfo.of("PermissionManager", "RoleGroup", "uEhJIADk"));
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode jsonNode = mapper.valueToTree(infos);
+        System.out.println(jsonNode);
+        List<ReferenceInfo> infos1 = mapper.convertValue(jsonNode, new TypeReference<>(){});
+        System.out.println(infos1);
+    }
+
 
 }
