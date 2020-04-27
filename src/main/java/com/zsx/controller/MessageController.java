@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping
-@RestController("/msg")
+@RequestMapping("/msg")
+@RestController
 public class MessageController {
 
     @Autowired
     private IProducer iProducer;
 
-    @GetMapping("/{topic}/{msg}")
-    public ResponseEntity<?> sendMsg(@PathVariable("topic") String topic, @PathVariable("msg") String msg) {
-        iProducer.sendMessage(topic, msg);
+    @GetMapping("/{topic}/{content}")
+    public ResponseEntity<?> sendMsg(@PathVariable("topic") String topic, @PathVariable("content") String content) {
+        iProducer.sendMessage(topic, content);
         return ResponseEntity.ok().build();
     }
 }
