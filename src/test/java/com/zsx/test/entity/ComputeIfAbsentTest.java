@@ -1,17 +1,12 @@
 package com.zsx.test.entity;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.IdentityHashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
-@SpringBootTest
-@ExtendWith(SpringExtension.class)
 public class ComputeIfAbsentTest {
 
     @Test
