@@ -1,0 +1,4 @@
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#com.zsx.config.ConfigA,\
+#com.zsx.config.ConfigB,\
+#com.zsx.config.ConfigC
